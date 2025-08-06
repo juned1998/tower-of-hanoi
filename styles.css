@@ -58,17 +58,10 @@ h1 {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    --disc-count: 3;
 }
 
 .disc {
     display: block;
     height: 10px;
-    background-color: red;
+    transition: transform 1s;
 }
-
-.disc-group > .disc:nth-child(1) { width: calc(100% * 1 / var(--disc-count)); }
-.disc-group > .disc:nth-child(2) { width: calc(100% * 2 / var(--disc-count)); }
-.disc-group> .disc:nth-child(3) { width: calc(100% * 3 / var(--disc-count)); }
-.disc-group > .disc:nth-child(4) { width: calc(100% * 4 / var(--disc-count)); }
-.disc-group > .disc:nth-child(5) { width: calc(100% * 5 / var(--disc-count)); }
