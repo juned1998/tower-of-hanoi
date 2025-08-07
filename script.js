@@ -53,7 +53,8 @@ const init = (discValue) => {
     return disc
   })
   towerRods[0].append(...discs)
-  document.documentElement.style.setProperty('--tower-rod-height', `${numberOfDiscs * discs[0].offsetHeight + 100}px`);
+  const towerHeight = Math.max(towerRods[0].offsetHeight, numberOfDiscs * discs[0].offsetHeight + 100);
+  document.documentElement.style.setProperty('--tower-rod-height', `${towerHeight}px`);
   toh([...discs].reverse(), towerRods[0], towerRods[2], towerRods[1])
 }
 
