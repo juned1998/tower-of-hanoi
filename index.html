@@ -7,23 +7,25 @@
 <body>
     <h1>Tower of Hanoi Visualizer</h1>
     <section class="container">
+        <div class="input-group">
+            <label>Number of Discs: <span id="disc-value">3</span></label>
+            <input type="range" min="1" max="15" value="3" class="slider" id="slider-input" />
+            <button id="start">START</button>
+        </div>
         <div class="towers-group">
             <div class="tower">
-                <div class="disc-group">
+                <div class="rod">
                 </div>
-                <span class="rod"></span>
                 <span class="base"></span>
             </div>
             <div class="tower">
-                <div class="disc-group">
+                <div class="rod">
                 </div>
-                <span class="rod"></span>
                 <span class="base"></span>
             </div>
             <div class="tower">
-                <div class="disc-group">
+                <div class="rod">
                 </div>
-                <span class="rod"></span>
                 <span class="base"></span>
             </div>
         </div>
