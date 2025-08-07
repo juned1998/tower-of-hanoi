@@ -54,9 +54,7 @@ const init = (discValue) => {
   })
   towerRods[0].append(...discs)
   document.documentElement.style.setProperty('--tower-rod-height', `${numberOfDiscs * discs[0].offsetHeight + 100}px`);
-  toh([...discs].reverse(), towerRods[0], towerRods[2], towerRods[1]).then(() => {
-    animStatus = 'idle'
-  })
+  toh([...discs].reverse(), towerRods[0], towerRods[2], towerRods[1])
 }
 
 const reset = () => {
