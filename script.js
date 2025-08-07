@@ -79,9 +79,9 @@ input.addEventListener("input", (event) => {
 
 startBtn.addEventListener("click", () => {
   if(animStatus === 'in-progress') {
-    return
+    window.reload()
   } else {
-    reset()
+    startBtn.textContent = "Reset"
    init(input.value)
   }
 });
