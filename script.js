@@ -59,7 +59,7 @@ const setDiscs = (count) => {
   })
   towerRods[0].append(...discs)
   towerRods.forEach(towerRod => {
-    towerRod.style.height = `${Math.max(200, numberOfDiscs * discs[0].offsetHeight + 100)}px`
+    towerRod.style.height = `${Math.max(200, numberOfDiscs * discs[0].offsetHeight + 50)}px`
   })
 }
 
