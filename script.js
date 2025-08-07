@@ -79,7 +79,7 @@ input.addEventListener("input", (event) => {
 
 startBtn.addEventListener("click", () => {
   if(animStatus === 'in-progress') {
-    window.reload()
+    window.location.reload()
   } else {
     startBtn.textContent = "Reset"
    init(input.value)
