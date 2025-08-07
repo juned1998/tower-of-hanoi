@@ -1,19 +1,29 @@
 :root {
   --disc-height: 10px;
-  --tower-base-width: 100px;
+  --tower-base-width: 80px;
   --tower-base-height: 10px;
   --tower-rod-height: 100px;
   --tower-rod-width: 10px;
+  --header-font-size: 16px;
+  --font-size: 12px
+}
+
+@media (min-width: 375px) {
+    :root {
+      --tower-base-width: 100px;
+    }
 }
 
 @media (min-width: 768px) {
-  :root {
-    --disc-height: 20px;
-    --tower-base-width: 200px;
-    --tower-base-height: 20px;
-    --tower-rod-height: 200px;
-    --tower-rod-width: 20px;
-  }
+    :root {
+        --disc-height: 20px;
+        --tower-base-width: 200px;
+        --tower-base-height: 20px;
+        --tower-rod-height: 200px;
+        --tower-rod-width: 20px;
+        --font-size: 16px;
+        --header-font-size: 32px;
+    }
 }
 
 * {
@@ -25,15 +35,22 @@
 body {
     background-color: #000;
     font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 16px;
 }
 
 h1 {
-    margin-top: 100px;
     text-align: center;
     -webkit-text-stroke: 1px #fff;
-    font-size: 32px;
     text-align: center;
-    margin-bottom: 32px;
+    font-size: var(--header-font-size);
+    @media (min-width: 768px) {
+        font-size: var(--header-font-size);
+    }
 }
 
 .container {
@@ -42,6 +59,10 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 50px;
+    @media (min-width: 768px) {
+        gap: 100px;
+    }
 }
 
 .towers-group {
@@ -93,7 +114,7 @@ h1 {
     display: block;
     height: var(--disc-height);
     min-width: 30px;
-    transition: transform 0.5s;
+    transition: transform;
     z-index: 1;
     flex-shrink: 0;
 }
@@ -103,10 +124,9 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 100px;
     width: 100%;
-    max-width: 320px;
     gap: 16px;
+    max-width: 400px;
     flex-wrap: wrap;
 }
 
@@ -116,6 +136,7 @@ button {
     padding: 8px;
     color: #fff;
     cursor: pointer;
+    font-size: var(--font-size);
 }
 
 .button-padding {
@@ -130,8 +151,8 @@ button:active {
 
 .slider {
   -webkit-appearance: none;
-  width: 76%;
-  height: 15px;
+  flex: 1;
+  height: 10px;
   border-radius: 5px;  
   background: #000;
 border: solid 1px #fff;
@@ -162,7 +183,7 @@ border: solid 1px #fff;
 }
 
 label {
-    font-size: 16px;
+    font-size: var(--font-size);
     color: #fff;
     width: 100%;
 }
@@ -171,4 +192,20 @@ label {
     display: flex;
     flex-direction: column;
     align-items: start;
+}
+
+.transition-controls{
+}
+
+.transition-controls label:nth-child(1) {
+    margin-right: 12px;
+}
+
+footer {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    font-size: var(--font-size)
 }

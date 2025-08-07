@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tower of Hanoi Visualizer</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Tower of Hanoi Visualizer</h1>
-    <section class="container">
+    <header>
+        <h1>Tower of Hanoi Visualizer</h1>
+    </header>
+    <main class="container">
         <div class="input-group">
             <label>Number of Discs: <span id="disc-value">3</span></label>
             <input type="range" min="1" max="15" value="3" class="slider" id="slider-input" />
@@ -29,7 +32,16 @@
                 <span class="base"></span>
             </div>
         </div>
-    <section>
+        <div class="transition-controls">
+            <label>transition-duration:</label>
+            <button class="transition-duration-btn">-</button>
+                <label id="transition-duration-value">500 ms</label>
+            <button class="transition-duration-btn">+</button>
+        </div>
+    </main>
+    <footer>
+        &#60;/> <a href="https://github.com/juned1998/tower-of-hanoi">https://github.com/juned1998/tower-of-hanoi</a>
+    </footer>
     <script src="script.js"></script>
 </body>
 
